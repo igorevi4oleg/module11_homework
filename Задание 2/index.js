@@ -1,11 +1,19 @@
-export function revertString (str) {
+export function getMonth(n) {
 
-    let revertedString = '';
+    let result = '';
 
-    for (let i = str.length - 1; i >= 0; i--) {
-        
-        revertedString += str[i];
-    }
+    if(n < 1 || n > 12) {
 
-    return revertedString;
+        result = 'Число указано некорректно'
+    } 
+    else if(isNaN(n)) {
+
+        result = 'Необходимо указать число'
+    } 
+    else if (n === 12) {
+
+        result = 'декабрь';
+    };
+  
+    return result;
 }
